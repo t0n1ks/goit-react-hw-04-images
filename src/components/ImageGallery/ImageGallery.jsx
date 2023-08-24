@@ -5,9 +5,9 @@ import s from './ImageGallery.module/ImageGallery.module.css';
 
 const ImageGallery = ({ images, onSelect }) => (
   <ul className={s.ImageGallery}>
-    {images.map(image => (
+    {images.map((image, index) => (
       <ImageGalleryItem
-        key={image.id}
+        key={index}
         image={image}
         onSelect={onSelect}
       />
